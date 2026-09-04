@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MeLog サポート</title>
+<style>
+:root{
+  --bg:#F7F4F0; --surface:#FFFFFF; --border:#E8E3DE;
+  --text:#2A2625; --text-sub:#7A7270; --accent:#7B6EAB;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",
+    "Yu Gothic","Noto Sans JP",sans-serif;
+  line-height:1.9; font-size:16px;
+}
+main{max-width:720px; margin:0 auto; padding:48px 20px 96px}
+h1{font-size:26px; line-height:1.4; margin:0 0 8px}
+h2{font-size:19px; margin:40px 0 12px; padding-top:8px}
+h3{font-size:16px; margin:28px 0 8px; color:var(--text)}
+p{margin:0 0 16px}
+ul,ol{margin:0 0 16px; padding-left:1.4em}
+li{margin:0 0 6px}
+strong{font-weight:700}
+hr{border:none; border-top:1px solid var(--border); margin:32px 0}
+a{color:var(--accent); overflow-wrap:anywhere}
+footer{
+  margin-top:56px; padding-top:20px; border-top:1px solid var(--border);
+  color:var(--text-sub); font-size:13px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1C1A19; --surface:#252120; --border:#3A3431;
+    --text:#F0EBE7; --text-sub:#A79E99; --accent:#A99BDC;
+  }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>MeLog サポート</h1>
+<p>MeLog（ミーログ）は、体調・気分・生活習慣を記録して、自分の傾向を知るためのアプリです。このページには、よくある質問と問い合わせ先を載せています。</p>
+<hr>
+<h2>お問い合わせ</h2>
+<p><a href="mailto:melog.support@gmail.com">melog.support@gmail.com</a></p>
+<p>不具合のご報告のときは、<strong>お使いの iPhone の機種と iOS のバージョン、どの画面で何をしたときに起きたか</strong> を書いていただけると助かります。個人で開発しているため、お返事に数日いただくことがあります。</p>
+<hr>
+<h2>よくある質問</h2>
+<h3>記録したデータはどこにありますか</h3>
+<p><strong>お使いの端末の中だけ</strong> に保存されます。開発者はサーバーを持っていないので、あなたの記録を受け取ることも、見ることもできません。くわしくはプライバシーポリシーをご覧ください。</p>
+<p><a href="https://unchorin.github.io/melog-privacy/">https://unchorin.github.io/melog-privacy/</a></p>
+<h3>機種を変えるときは、記録を移せますか</h3>
+<p>移せます。今の端末で「設定 → データのバックアップ」を開き、ファイルに書き出してください。新しい端末の同じ画面から読み込むと、記録・記録項目・自分の取扱説明書・AIペルソナ設定が戻ります。</p>
+<p><strong>APIキーだけは入っていません。</strong> 料金が発生する鍵なので、他人の手に渡ったときに使われないよう外してあります。戻したあとに入れ直してください。</p>
+<h3>アプリを消すと、記録はどうなりますか</h3>
+<p>一緒に消えます。記録は端末の中にしか無いので、消す前に「設定 → データのバックアップ」で書き出しておいてください。</p>
+<h3>記録する項目を増やしたい・減らしたい</h3>
+<p>「設定 → 記録項目のカスタマイズ」で、項目の追加・削除・並び替えができます。使わない項目は、消さずに記録画面から隠すこともできます。記録画面の一番下にある「記録する項目は自分で選べます」からも同じ画面を開けます。</p>
+<h3>体調と気分だけ、1日に何度も記録できるのはなぜですか</h3>
+<p>朝はだるかったけれど夕方は元気だった、という1日の中の動きを残せるようにしています。記録するたびに新しい記録として増え、グラフには1日に複数の点が出ます。</p>
+<p>そのほかの項目は1日に1回です。同じ日にもう一度記録すると、前の内容に上書きされます。</p>
+<h3>「なし」を選ぶことと、何も記録しないことは違いますか</h3>
+<p>違います。「なし」は <strong>その日はやらなかった、という記録</strong> です。何も押さなければ「未記録」で、これは何も分かっていない状態です。</p>
+<p>傾向を計算するときは「あり」の日と「なし」の日を比べるので、<strong>やらなかった日も「なし」を押しておくと比べられるようになります。</strong> 未記録の日は数に入りません。</p>
+<h3>睡眠時間は、どの夜のことですか</h3>
+<p><strong>その日の朝までに眠った時間</strong> です。たとえば8月1日の睡眠時間は、7月31日の夜から8月1日の朝までに眠った時間を指します。こうしておくと、その日の記録がその日のうちに済み、同じ日の体調と並べて見られます。</p>
+<h3>AI機能を使うには、お金がかかりますか</h3>
+<p>アプリ自体に月額料金はありません。AIに相談する方法は2つあります。</p>
+<ul><li><strong>相談用の文章を作ってコピーし、ふだん使っているAIに貼る。</strong> 登録も設定もいりません。</li><li><strong>Anthropic のAPIキーを設定して、アプリの中で相談する。</strong> この場合は Anthropic に登録して、発行された文字列を設定画面に貼っていただきます。料金は Anthropic からご本人に直接かかります。</li></ul>
+<p>どちらも使わなくても、記録・グラフ・傾向の計算はすべてお使いいただけます。</p>
+<h3>記録や分析の結果は、診断になりますか</h3>
+<p>なりません。本アプリは医療機器ではなく、記録や分析の結果は病気の診断・治療・予防を目的としたものではありません。気になる症状は医療機関にご相談ください。</p>
+<hr>
+<h2>動作環境</h2>
+<p>iOS 15.1 以降の iPhone。インターネットに接続していなくても、記録・グラフ・傾向の計算はお使いいただけます。</p>
+<footer>MeLog｜体調・気分・習慣を記録して、自分の傾向を知る</footer>
+</main>
+</body>
+</html>
